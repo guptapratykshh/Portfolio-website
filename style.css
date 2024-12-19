@@ -25,9 +25,13 @@ body {
     max-width: 1200px;
     margin: auto;
   }
+
+.skills-container:hover{
+    transform: scale(1.05)
+}
   
   .section {
-    background: ##1e1e1e;
+    background: #1e1e1e;
     padding: 30px;
     border-radius: 12px;
     flex: 1;
