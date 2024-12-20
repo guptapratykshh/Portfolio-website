@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2b2b2b;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,7 +35,7 @@ body {
 }
 
   .section {
-    background: #1e1e1e;
+    background:var(--primary-color);
     padding: 30px;
     border-radius: 12px;
     flex: 1;
@@ -168,8 +168,8 @@ body {
     font-family:Arial, sans-serif;
     margin:0;
     padding:0;
-    background-color:#121212;
-    color:#fff;
+    background-color:var(--primary-color);
+    color:var(--secondary-color);
 }
 
 .projectssection {
@@ -189,7 +189,7 @@ body {
 }
 
 .projectcard {
-    background-color:#1e1e1e;
+    background-color:var(--primary-color);
     border-radius:10px;
     padding:20px;
     width:300px;
@@ -228,8 +228,8 @@ body {
 
 .projectbtn {
     text-decoration:none;
-    background-color: white;
-    color:#ff4500;
+    background-color: var(--tertiary-color);
+    color:var(--quaternary-color);
     padding:10px 20px;
     border-radius:5px;
     display:inline-block;
@@ -238,8 +238,8 @@ body {
 }
 
 .projectbtn:hover {
-    background-color:#ff4500;
-    color:white 
+    background-color:var(--quaternary-color);
+    color:var(--tertiary-color)
 }
 #text{
     color:white;
@@ -250,8 +250,8 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
 }
 
 nav {
@@ -259,8 +259,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #1c1c1c;
+    background-color: var(--primary-color);
     border-bottom: 1px solid #333;
+    
 }
 
 nav .title {
@@ -349,6 +350,7 @@ nav .hire-btn:hover {
 .email-section {
     display: flex;
     margin-top: 10px;
+    
 }
 
 .email-section input {
@@ -357,6 +359,7 @@ nav .hire-btn:hover {
     border: none;
     outline: none;
     width: 200px;
+   
 }
 
 .email-section button {
@@ -390,4 +393,26 @@ nav .hire-btn:hover {
 
 #text3{
     color: #ff4500;
+}
+#icon{
+    width:30px;
+    height:50px;
+    cursor:pointer;
+}
+:root{
+    --primary-color:#121212;
+    --secondary-color:#ffffff;
+    --tertiary-color:white;
+    --quaternary-color:#ff4500;
+}
+.light-theme{
+    --primary-color:#ffffff;
+    --secondary-color:#121212;
+    --tertiary-color:#ff4500;
+    --quaternary-color:white;
+}
+#email{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    
 }
