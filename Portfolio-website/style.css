@@ -197,6 +197,14 @@ body {
     
 }
 
+/* Make navigation static for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        position: static; /* Change position to static for mobile/tablet */
+        box-shadow: none; /* Remove shadow to keep it simpler */
+    }
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -208,6 +216,14 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        position: static; /* Change position to static for mobile/tablet */
+        box-shadow: none; /* Remove shadow to keep it simpler */
+    }
+}
+
 
 .navbar:hover {
     background: linear-gradient(90deg, rgba(34, 34, 34, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
@@ -711,11 +727,11 @@ body {
     position: absolute;
     top: 20px;
     right: 60px;
-    background-color: #ff4500;
-    color: #ffffff;
-    padding: 12px 30px;
+    background-color: white;
+    color:#ff4500;
+    padding: 10px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -726,6 +742,7 @@ body {
 
   .hire-me-btn:hover {
     background-color: #ff4500;
+    color: white;
     transform: scale(1.05);
   }
 
@@ -787,11 +804,11 @@ body {
   }
 
   .email-btn {
-    background-color: #ff4500;
+    background-color: white;
     border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: #ff4500;
+    padding: 10px 10px;
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
@@ -799,6 +816,7 @@ body {
 
   .email-btn:hover {
     background-color: #ff4500;
+    color: white;
     transform: scale(1.05);
   }
 
@@ -821,3 +839,93 @@ body {
 .sp{
     color: white;
 }
+
+/* 
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .hero {
+        height: auto;
+        padding: 5%;
+        background-position: center;
+    }
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+    .intro h1,
+    .intro h2 {
+        font-size: 1.8rem;
+    }
+    .titles h3,
+    .titles h4 {
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .testimonials-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .projectcard {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .left-column, .right-column {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hire-me-btn {
+        position: static;
+        margin-top: 20px;
+    }
+    .email-form {
+        flex-direction: column;
+    }
+    .email-btn, .email-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-text h1, .hero-text h2 {
+        font-size: 2rem;
+    }
+    .titles h3, .titles h4 {
+        font-size: 1.8rem;
+    }
+    .stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .projectcard {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .skills-container {
+        gap: 10px;
+    }
+    .testimonials-container {
+        gap: 10px;
+    }
+} */

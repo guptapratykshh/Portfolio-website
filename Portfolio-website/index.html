@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>Portfolio Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
                     <h2>Binod Doe</h2>
                 </div>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">DOWNLOAD CV <i class="fas fa-download"></i></a>
-                    <a href="#Projects" class="btn btn-secondary">Projects <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="cv.pdf" download="Binod_Doe_CV" class="btn btn-primary">DOWNLOAD CV <i class="fas fa-download"></i></a>
+                    <a href="#testimonials" class="btn btn-secondary">Recommendation <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
                 <div class="social-icons">
                     <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
@@ -50,7 +50,7 @@
                 <img src="https://leatherskinshop.com/cdn/shop/articles/Mens-Orange-Jacket-Outfit_155e93f7-58c8-440d-881d-311c35a7ea25.jpg?v=1681179186" alt="Profile Picture">
             </div>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#project">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -112,7 +112,6 @@
         <h2 class="title"><span>My</span> Skills</h2>
 
         <div class="skills-container" id="cc1">
-            <!-- Full Stack Developer Section -->
             <div class="section">
                 <div class="section-header">
                     <img src="fsd.png" alt="Full Stack Developer" class="section-icon">
@@ -226,7 +225,7 @@
         </div>
     </section>
 
-    <section class="projectssection">
+    <section class="projectssection" id="project">
         <h1><span id="text">My</span> Projects</h1>
         <div class="projectscontainer">
             <div class="projectcard">
@@ -325,7 +324,7 @@
     </div>
     </section>
 
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials">
             <h2>What People <span class="sp"> Say About Me</span></h2>
             <div class="testimonials-container">
               <div class="testimonial">
@@ -355,52 +354,13 @@
             </div>         
                 </section>
     
-    
-        <script>
-    
-    const container = document.querySelector('.testimonials-container');
-    const testimonials = document.querySelectorAll('.testimonial');
-    
-    // Clone testimonials for seamless rotation
-    testimonials.forEach((testimonial) => {
-      const clone = testimonial.cloneNode(true);
-      container.appendChild(clone); // Append clone to the end
-    });
-    
-    let currentIndex = 0;
-    const testimonialWidth = testimonials[0].offsetWidth + 20; // Include gap
-    const totalTestimonials = testimonials.length; // Original count
-    const interval = 3000; // Time between slides
-    
-    function slideTestimonials() {
-      currentIndex++;
-      container.style.transition = 'transform 0.5s ease-in-out';
-      container.style.transform = `translateX(-${testimonialWidth * currentIndex}px)`;
-    
-      // Reset position when reaching the end of the clones
-      container.addEventListener('transitionend', () => {
-        if (currentIndex === totalTestimonials) {
-          currentIndex = 0; // Reset to start
-          container.style.transition = 'none'; // Remove animation
-          container.style.transform = 'translateX(0)'; // Reset transform
-        }
-      });
-    }
-    
-    // Auto slide every interval
-    setInterval(slideTestimonials, interval);
-    
-        </script>
-    
-    <div class="contact-section">
-        <!-- Left Column (Text and Social Icons) -->
+    <div class="contact-section" id="contact">
         <div class="left-column">
           <h1 class="contact-title">Let's <span class="sp">Connect</span></h1>
           <p class="contact-description">
             Have questions or want to collaborate on a project? I'm here to help you bring your ideas to life with creative and innovative web solutions.
           </p>
     
-          <!-- Contact Information Section -->
           <div class="contact-details">
             <h3>Contact <span class="sp">Information</span></h3>
             <p>Phone: +91 7738443636</p>
@@ -408,7 +368,6 @@
             <p>Portfolio: <a href="#">Portfolio.Binod.com</a></p>
           </div>
     
-          <!-- Social Media Icons -->
           <div class="social-icons">
             <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -416,22 +375,75 @@
           </div>
         </div>
     
-        <!-- Right Column (Stay Updated Section) -->
         <div class="right-column">
-          <div class="stay-updated">
-            <h3>Stay<span class="sp" > Updated</span></h3>
-            <p>Subscribe to receive the latest updates and news directly to your inbox.</p>
-            <form class="email-form">
-              <input type="email" class="email-input" placeholder="Your Email Address">
-              <button class="email-btn">Subscribe</button>
-            </form>
+            <div class="stay-updated">
+              <h3>Stay<span class="sp" > Updated</span></h3>
+              <p>Subscribe to receive the latest updates and news directly to your inbox.</p>
+              <form class="email-form">
+                <input type="email" id="email-input" class="email-input" placeholder="Your Email Address">
+                <button type="button" id="subscribe-btn" class="email-btn">Subscribe</button>
+              </form>
+            </div>
           </div>
-        </div>
-    
-        <!-- Hire Me Button -->
         <a href="#" class="hire-me-btn">Hire Me</a>
       </div>
 
+      <script>
+    
+        const container = document.querySelector('.testimonials-container');
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        testimonials.forEach((testimonial) => {
+          const clone = testimonial.cloneNode(true);
+          container.appendChild(clone); 
+        });
+        
+        let currentIndex = 0;
+        const testimonialWidth = testimonials[0].offsetWidth + 30; 
+        const totalTestimonials = testimonials.length; 
+        const interval = 3000; 
+    
+        function slideTestimonials() {
+          currentIndex++;
+          container.style.transition = 'transform 0.5s ease-in-out';
+          container.style.transform = `translateX(-${testimonialWidth * currentIndex}px)`;
+        
+          container.addEventListener('transitionend', () => {
+            if (currentIndex === totalTestimonials) {
+              currentIndex = 0; 
+              container.style.transition = 'none';
+              container.style.transform = 'translateX(0)'; 
+            }
+          });
+        }
+        
+        setInterval(slideTestimonials, interval);
+    
+        const subscribeBtn = document.getElementById("subscribe-btn");
+const emailInput = document.getElementById("email-input");
 
+
+subscribeBtn.addEventListener("click", () => {
+    const email = emailInput.value.trim();
+    if (email === "") {
+        alert("Please enter an email address!");
+        return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address!");
+        return;
+    }
+    localStorage.setItem("subscribedEmail", email);
+    alert("Subscription successful!");
+    emailInput.value = ""; 
+});
+
+window.addEventListener("load", () => {
+    const subscribedEmail = localStorage.getItem("subscribedEmail");
+    if (subscribedEmail) {
+        alert(`You are already subscribed with: ${subscribedEmail}`);
+    }
+});
+            </script>
 </body>
 </html>
