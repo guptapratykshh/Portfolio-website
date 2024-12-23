@@ -226,6 +226,7 @@
 
     <section class="projectssection" id="project">
         <h1><span id="text">My</span> Projects</h1>
+        <br>
         <div class="projectscontainer">
             <!-- Project 1 -->
             <div class="projectcard">
@@ -236,7 +237,7 @@
                     <span>Figma</span>
                     <span>Adobe Premiere</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('health-app')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('health-app')">View  Description</button>
             </div>
             <!-- Project 2 -->
             <div class="projectcard">
@@ -249,7 +250,7 @@
                     <span>PHP</span>
                     <span>MongoDB</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('ecommerce')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('ecommerce')">View Description</button>
             </div>
             <!-- Project 3 -->
             <div class="projectcard">
@@ -262,7 +263,7 @@
                     <span>Node.js</span>
                     <span>MongoDB</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('portfolio')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('portfolio')">View Description</button>
             </div>
             <!-- Project  4-->
             <div class="projectcard">
@@ -273,7 +274,7 @@
                     <span>Figma</span>
                     <span>Adobe Premiere</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('health-app')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('health-app')">View Description</button>
             </div>
             <!-- Project 5 -->
             <div class="projectcard">
@@ -286,7 +287,7 @@
                     <span>PHP</span>
                     <span>MongoDB</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('ecommerce')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('ecommerce')">View Description</button>
             </div>
             <!-- Project 6 -->
             <div class="projectcard">
@@ -299,7 +300,7 @@
                     <span>Node.js</span>
                     <span>MongoDB</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('portfolio')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('portfolio')">View Description</button>
             </div>
             <!-- Project 7 -->
             <div class="projectcard">
@@ -312,7 +313,7 @@
                     <span>PHP</span>
                     <span>MongoDB</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('ecommerce')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('ecommerce')">View Description</button>
             </div>
             <!-- Project 8 -->
             <div class="projectcard">
@@ -325,19 +326,21 @@
                     <span>Node.js</span>
                     <span>MongoDB</span>
                 </div>
-                <button class="projectbtn" onclick="showPopup('portfolio')">View Project</button>
+                <button class="projectbtn" onclick="showPopup('portfolio')">View Description</button>
             </div>
         </div>
     </section>
 
     <!-- Popup Section -->
     <div id="popup" class="popup">
-        <div class="popup-content">
+        <div class="popup-content"> 
             <span class="close-btn" onclick="closePopup()">X</span>
             <img id="popup-img" src="" alt="Project Image">
             <h2 id="popup-title"></h2>
             <p id="popup-description"></p>
+            <a href="https://divyanshi750.github.io/carPool/congo.html"class="projectbtn" target="_blank">View Project</a> 
         </div>
+        
     </div>
 
         <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title" >
@@ -461,12 +464,13 @@ window.addEventListener("load", () => {
         alert(`You are already subscribed with: ${subscribedEmail}`);
     }
 });
+
 document.addEventListener("DOMContentLoaded", function() {
 const hireMeButton = document.getElementById("hire-me-btn");
 if (hireMeButton) {
     hireMeButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevents default behavior
-        window.location.href = "Hireme.html"; // Redirect to Hireme.html
+        event.preventDefault(); 
+        window.location.href = "Hireme.html"; 
     });
 } else {
     console.log("Hire Me button not found!");
