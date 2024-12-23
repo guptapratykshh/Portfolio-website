@@ -1,0 +1,167 @@
+
+/* Styles from Hireme.css */
+:root {
+    --primary-color: #DF2F14;
+    --primary-hover: #c52812;
+    --primary-light: rgba(223, 47, 20, 0.1);
+    --primary-gradient: linear-gradient(135deg, #DF2F14, #ff4a2f);
+    --secondary-color: #161616;
+    --text-light: #ffffff;
+    --text-dark: #161616;
+    --gradient-overlay: linear-gradient(45deg, rgba(223, 47, 20, 0.9), rgba(22, 22, 22, 0.95));
+    --transition-speed: 0.3s;
+    --border-radius: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    border: 2px solid rgba(22, 22, 22, 0.1);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all var(--transition-speed) ease;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(223, 47, 20, 0.1);
+  }
+  
+  .contact-form button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-form button:hover {
+    background: #c52812;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(223, 47, 20, 0.2);
+  }
+  
+  .contact-form button:active {
+    transform: translateY(0);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--secondary-color);
+  }
+  
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: blur(8px); /* Adjust blur intensity as needed */
+    background-image: url('https://media.licdn.com/dms/image/D4E12AQHc3sZmuomXWg/article-cover_image-shrink_720_1280/0/1709543574920?e=2147483647&v=beta&t=N3eQ-CMlW_bu98JkgALHrk0JLctOPNkgqYoPNSecH-A');
+    background-size: cover;
+    background-position: center;
+  }
+
+  
+  
+  .container {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    backdrop-filter: blur(20px); /* Stronger blur for frosted effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .left-section {
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay with transparency */
+    color: var(--text-light);
+    padding: 4rem;
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(15px); /* Matches blur level for better effect */
+  }
+  
+  .right-section {
+    padding: 4rem;
+    width: 55%;
+    background: rgba(255, 255, 255, 0.5); /* Transparent white for form */
+    backdrop-filter: blur(15px); /* Same blur as the left section */
+  }
+/*   
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .left-section,
+    .right-section {
+      width: 100%;
+      padding: 2rem;
+    }
+  } */
+  
+  /* Styles from typography.css */
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    font-weight: 800;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    background-clip: text;             /* Standard property */
+    -webkit-background-clip: text;    /* WebKit-specific for broader support */
+    -webkit-text-fill-color: transparent; /* Ensures transparent text for WebKit browsers */
+    color: transparent;               /* For fallback support in other browsers */
+  }
+  
+  .left-section p {
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  .contact-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  

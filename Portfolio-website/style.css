@@ -530,82 +530,169 @@ h2 {
 
 
 body {
-    font-family:Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background-color:#121212;
-    color:#fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
 }
 
 .projectssection {
-    padding:40px;
-    text-align:center;
+    padding: 40px;
+    text-align: center;
 }
 
 .projectssection h1 {
-    color:#ff4500;
+    color: #ff4500;
 }
 
 .projectscontainer {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .projectcard {
-    background-color:#1e1e1e;
-    border-radius:10px;
-    padding:20px;
-    width:300px;
-    box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align:center;
-    transition:transform 0.3s;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
 }
 
 .projectcard:hover {
-    transform:translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .projectcard img {
-    width:100%;
-    border-radius:10px;
-    margin-bottom:20px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .projectcard h2 {
-    font-size:1.5em;
-    margin:10px 0;
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 .projectcard .technologies {
-    margin:10px 0;
+    margin: 10px 0;
 }
 
 .projectcard .technologies span {
-    display:inline-block;
-    margin:5px;
-    padding:10px;
-    border-radius:5px;
-    background-color:#ff4500;
-    color:#fff;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ff4500;
+    color: #fff;
 }
 
 .projectbtn {
-    text-decoration:none;
+    text-decoration: none;
     background-color: white;
-    color:#ff4500;
-    padding:10px 20px;
-    border-radius:50px;
-    display:inline-block;
-    margin-top:10px;
-    transition:background-color 0.3s;
+    color: #ff4500;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.2); 
+    transition: all 0.3s ease-in-out; 
+    border: 2px solid #ff4500; 
 }
 
 .projectbtn:hover {
-    background-color:#ff4500;
-    color:white 
+    background-color: #ff4500;
+    color: white;
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.4); 
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8); 
 }
+
+.projectbtn:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.2); 
+}
+
+.projectbtn:focus {
+    outline: none; 
+    box-shadow: 0 0 10px 2px rgba(255, 69, 0, 0.6); 
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    color: white;
+}
+
+.popup-content img {
+    max-width: 100%; /* Image scales within the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #ff4500;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size:2rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
 #text{
     color:white;
 

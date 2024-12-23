@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire Me - Software Developer</title>
+    <link rel="stylesheet" href="Hireme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <img src="/images/dev-bg.jpg" alt="" class="bg-image" aria-hidden="true">
+    <div class="bg-overlay"></div>
+    
+    <div class="container">
+      <div class="left-section">
+        <h1>Let's Work Together</h1>
+        <h2>Let's Build Something Amazing.</h2>
+        <p>I'm a passionate software developer specializing in creating innovative digital solutions. With expertise in modern technologies and a keen eye for detail, I can help transform your ideas into reality.</p>
+        
+        <div class="contact-info">
+          <h3>Keep In Touch</h3>
+          <a href="mailto:example@info.com">BinodJoe@gmail.com</a>
+          <p>+91 7738443636</p>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="text" placeholder="Your Subject">
+          <textarea placeholder="Tell me about your project" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+    
+    const contactForm = document.querySelector('.contact-form');
+  
+    
+    contactForm.addEventListener('submit', (event) => {
+      
+      event.preventDefault();
+  
+      
+      const formData = {
+        name: contactForm.querySelector('input[placeholder="Your Name"]').value,
+        email: contactForm.querySelector('input[placeholder="Email Address"]').value,
+        subject: contactForm.querySelector('input[placeholder="Your Subject"]').value,
+        message: contactForm.querySelector('textarea').value,
+      };
+  
+      
+      localStorage.setItem('contactFormData', JSON.stringify(formData));
+  
+      alert('Your data has been saved locally!');
+  
+     
+      contactForm.reset();
+    });
+  
+    
+    const savedData = localStorage.getItem('contactFormData');
+    if (savedData) {
+      console.log('Saved Form Data:', JSON.parse(savedData));
+    }
+  </script>
+  
