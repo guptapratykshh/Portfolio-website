@@ -1,5 +1,4 @@
 
-/* Styles from Hireme.css */
 :root {
     --primary-color: #DF2F14;
     --primary-hover: #c52812;
@@ -84,14 +83,12 @@
     height: 100%;
     object-fit: cover;
     z-index: -2;
-    filter: blur(8px); /* Adjust blur intensity as needed */
+    filter: blur(8px);
     background-image: url('https://media.licdn.com/dms/image/D4E12AQHc3sZmuomXWg/article-cover_image-shrink_720_1280/0/1709543574920?e=2147483647&v=beta&t=N3eQ-CMlW_bu98JkgALHrk0JLctOPNkgqYoPNSecH-A');
     background-size: cover;
     background-position: center;
   }
 
-  
-  
   .container {
     background: rgba(255, 255, 255, 0.1); 
     border-radius: var(--border-radius);
@@ -99,27 +96,27 @@
     width: 100%;
     max-width: 1200px;
     display: flex;
-    backdrop-filter: blur(20px); /* Stronger blur for frosted effect */
+    backdrop-filter: blur(20px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   }
   
   .left-section {
-    background: rgba(0, 0, 0, 0.5); /* Darker overlay with transparency */
+    background: rgba(0, 0, 0, 0.5); 
     color: var(--text-light);
     padding: 4rem;
     width: 45%;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(15px); /* Matches blur level for better effect */
+    backdrop-filter: blur(15px); 
   }
   
   .right-section {
     padding: 4rem;
     width: 55%;
-    background: rgba(255, 255, 255, 0.5); /* Transparent white for form */
-    backdrop-filter: blur(15px); /* Same blur as the left section */
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(15px);
   }
-/*   
+  
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -130,9 +127,9 @@
       width: 100%;
       padding: 2rem;
     }
-  } */
+  }
   
-  /* Styles from typography.css */
+
   h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -146,10 +143,10 @@
     line-height: 1.2;
     font-weight: 800;
     background: linear-gradient(45deg, #fff, #f0f0f0);
-    background-clip: text;             /* Standard property */
-    -webkit-background-clip: text;    /* WebKit-specific for broader support */
-    -webkit-text-fill-color: transparent; /* Ensures transparent text for WebKit browsers */
-    color: transparent;               /* For fallback support in other browsers */
+    background-clip: text;           
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent; 
+    color: transparent;            
   }
   
   .left-section p {
