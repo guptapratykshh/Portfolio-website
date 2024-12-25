@@ -13,6 +13,16 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+#icon{
+    height:25px;
+    float:right;
+    top:5px;
+    right:10px;
+    position:fixed; 
+    z-index: 1050;
+    }
+    
+
 
 :root {
     --font-inter: Inter;
@@ -29,6 +39,37 @@ body {
     --padding-xl: 20px;
     --br-41xl: 60px;
     --br-21xl: 40px;
+    --body-color:#121212;
+    --text-color:white;
+    --card-color:#1e1e1e;
+    --contact-color:#181818;
+    --skills-color:#262626;
+    --num-color:#FFD3D0;
+    --hover--color:#444;
+    --Sdiv-color:#2b2b2b;
+    --testimonial-color:#292929;
+    --testitext-color: #d0d5dd;
+    --testihover-color: #292929;
+    --emailbox-color: #333;
+    --skillhover-color:#333333;
+    --popup-color:#1e1e1e;
+   
+}
+.light-theme{
+    --body-color:white;
+    --text-color:black;
+    --card-color:#D6D6D6;
+    --contact-color:#D6D6D6;
+    --skills-color:#D6D6D6;
+    --num-color:#df7b74;
+    --hover-color:#D6D6D6;
+    --Sdiv-color:white;
+    --testimonial-color:#D6D6D6;
+    --testitext-color: #292929;
+    --testihover-color: white;
+    --emailbox-color:white;
+    --skillhover-color:#D6D6D6;
+    --popup-color:#fff;
 }
 
 .container {
@@ -57,7 +98,7 @@ body {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color:white;
+    color:var(--text-color);
 }
 
 .about h2 span {
@@ -79,7 +120,7 @@ body {
 
 .stat-item h3 {
     font-size: 3rem;
-    color: #FFD3D0;
+    color: var(--num-color);
     margin-bottom: 0.5rem;
 }
 
@@ -347,7 +388,7 @@ body {
 }
 
 .title span {
-    color: white;
+    color: var(--text-color);
 }
 
 .skills-container {
@@ -370,7 +411,7 @@ body {
 }
 
 .section {
-    background: #262626;
+    background: var(--skills-color);
     padding: 20px;
     border-radius: 20px;
     flex: 1;
@@ -411,13 +452,13 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #2b2b2b;
+    background-color: var(--Sdiv-color);
     border-radius: 8px;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .skill:hover {
-    background-color: #333333;
+    background-color: var(--skillhover-color);
     transform: scale(1.05);
 }
 
@@ -469,7 +510,7 @@ h2 {
 }
 
 .education-item:hover {
-    background-color: #444;
+    background-color: var(--hover-color);
     transform: scale(1.02);
 }
 
@@ -506,7 +547,7 @@ h2 {
 }
 
 #text1{
-    color:white;
+    color:var(--text-color);
 }
 
 body {
@@ -514,7 +555,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #121212;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .projectssection {
@@ -534,7 +575,7 @@ body {
 }
 
 .projectcard {
-    background-color: #1e1e1e;
+    background-color: var(--card-color);
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -617,7 +658,7 @@ body {
 }
 
 .popup-content {
-    background-color: #1e1e1e;
+    background-color:var(--popup-color);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -647,7 +688,7 @@ body {
 
 .popup-content p {
     font-size: 1rem;
-    color: #ccc;
+    color: var(--text-color);
     margin-top: 10px;
 }
 
@@ -655,9 +696,9 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size:2rem;
+    font-size:1.5rem;
     cursor: pointer;
-    color: #ffffff;
+    color: red;
 }
 
 @keyframes fadeIn {
@@ -672,14 +713,14 @@ body {
 }
 
 #text{
-    color:white;
+    color:var(--text-color);
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #161616;
-    color: #fff;
+    color:var(--text-color);
 }
 
 .testimonials {
@@ -703,18 +744,18 @@ body {
 
 .testimonial {
     min-width: 300px;
-    background: #292929;
+    background: var(--testimonial-color);
     border-radius: 10px;
     padding: 20px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-style: italic;
-    color: #d0d5dd;
+    color:(--testitext-color);
 }
 
 .testimonial:hover {
     transform: translateY(-10px);
-    background: #292929;
+    background:var(--testihover-color);
 }
 
 .testimonial:hover .testimonial-content {
@@ -743,7 +784,7 @@ body {
 
   .testimonial-footer p {
     font-size: 1rem;
-    color: #d0d5dd;
+    color: var(--text-color);
   }
   
   @media (max-width: 768px) {
@@ -761,12 +802,12 @@ body {
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color:var(--body-color);
+    color: var(--text-color);
   }
 
   .contact-section {
-    background-color: #181818;
+    background-color: var(--contact-color);
     padding: 40px 60px;
     display: flex;
     flex-direction: row;
@@ -857,7 +898,7 @@ body {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #333;
+    background-color:var(--emailbox-color);
     color: #fff;
     outline: none;
   }
@@ -900,7 +941,7 @@ body {
   }
 
 .sp{
-    color: white;
+    color: var(--text-color);
 }
 
 @media (max-width: 480px) {

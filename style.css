@@ -29,6 +29,10 @@ body {
     --padding-xl: 20px;
     --br-41xl: 60px;
     --br-21xl: 40px;
+    --body-color:#121212;
+}
+.light-theme{
+    --body-color:white;
 }
 
 .container {
@@ -57,7 +61,8 @@ body {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color:white;
+    color:var(--text-color);
+    
 }
 
 .about h2 span {
@@ -347,7 +352,7 @@ body {
 }
 
 .title span {
-    color: white;
+    color:var(--text-color);
 }
 
 .skills-container {
@@ -506,7 +511,7 @@ h2 {
 }
 
 #text1{
-    color:white;
+    color:var(--text-color);
 }
 
 body {
@@ -676,7 +681,7 @@ body {
 }
 
 #text{
-    color:white;
+    color:var(--text-color);
 }
 
 body {
