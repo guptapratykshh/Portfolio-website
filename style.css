@@ -373,7 +373,7 @@ body {
 body {
     font-family: Arial, sans-serif;
     background-color: #1c1c1c;
-    color: white;
+    color: rgb(230, 226, 226);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
