@@ -309,7 +309,7 @@ body.dark {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7rem;
+    gap: 6rem;
     flex-wrap: wrap;
     padding: 0 20px;
 }
