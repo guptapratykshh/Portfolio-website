@@ -12,7 +12,14 @@
     </head>
 <body aria-required="true">
     <header class="hero">
-        
+        <div id ="toggle">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
         
         <div id="hero-content"class="hero-content">
             <div class="hero-text">
@@ -28,7 +35,6 @@
                     <a href="https://github.com" target="_blank"><i class="fab fa-github" aria-label="opens gitub"></i></a>
                     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin" aria-label="opens linkedin"></i></a>
                     <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" aria-label=" opens youtube"></i></a>
-                    <img src="./sun.png" id="icon">
                   </div>
                 <div class="titles">
                     <h3>I am,</h3>
@@ -115,8 +121,62 @@
 
         <div class="skills-container" id="cc1">
             <div class="section">
+                <div class="section-header" id="cc2">
+                    <img src="uiux.png" alt="UI/UX Design icon " class="section-icon">
+                    <h2>Backend Developer</h2>
+                </div>
+                <div class="skills">
+                   
+                    <div class="skill">
+                        <img src="javascript.png" alt="JavaScript icon total rating 4 on 5" class="skill-icon">
+                        <div class="dots">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <img src="nodejs.png" alt="NodeJS icon total rating 3 on 5" class="skill-icon">
+                        <div class="dots">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="white-dot.png" alt="white dot">
+                            <img src="white-dot.png" alt="white dot">
+                        </div>
+                    </div>
+
+                   
+                    <div class="skill">
+                        <img src="mongodb.png" alt="MongoDB icon total rating 3 on 5" class="skill-icon">
+                        <div class="dots">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="green-dot.png" alt="green dot">
+                            <img src="white-dot.png" alt="white dot">
+                            <img src="white-dot.png" alt="white dot">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="html5.png" alt="HTML5 icon total rating 5 on 5" class="skill-icon">
+                        <div class="dots">
+                            <img src="green-dot.png" alt="dot">
+                            <img src="green-dot.png" alt="dot">
+                            <img src="green-dot.png" alt="dot">
+                            <img src="green-dot.png" alt="dot">
+                            <img src="green-dot.png" alt="green dot">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
                 <div class="section-header">
-                    <img src="fsd.jpeg" alt="Full Stack Developer icon" class="section-icon">
+                    <img src="fsd.png" alt="Full Stack Developer icon" class="section-icon">
                     <h2 class="h2">Full</h2>
                     <h2 class="h2">Stack</h2>
                     <h2 class="h2">Developer</h2>
@@ -184,7 +244,7 @@
 
             <div class="section">
                 <div class="section-header" id="cc2">
-                    <img src="uiux.jpeg" alt="UI/UX Design icon " class="section-icon">
+                    <img src="uiux.png" alt="UI/UX Design icon " class="section-icon">
                     <h2>UX & UI Design</h2>
                 </div>
                 <div class="skills">
@@ -231,7 +291,7 @@
         <h1><span id="text">My</span> Projects</h1>
         <br>
         <div class="projectscontainer">
-            <!-- Project 1 -->
+
             <div class="projectcard">
                 <img src="./imagee.png" alt="img">
                 <h2>Health App Design</h2>
@@ -242,7 +302,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('health-app')">View  Description</button>
             </div>
-            <!-- Project 2 -->
+
             <div class="projectcard">
                 <img src="./image copy.png" alt="img">
                 <h2>Ecommerce Website</h2>
@@ -255,7 +315,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('ecommerce')">View Description</button>
             </div>
-            <!-- Project 3 -->
+
             <div class="projectcard">
                 <img src="./image.png" alt="img">
                 <h2>Portfolio Website</h2>
@@ -268,7 +328,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('portfolio')">View Description</button>
             </div>
-            <!-- Project  4-->
+
             <div class="projectcard">
                 <img src="./imagee.png" alt="img">
                 <h2>Health App Design</h2>
@@ -279,7 +339,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('health-app')">View Description</button>
             </div>
-            <!-- Project 5 -->
+   
             <div class="projectcard">
                 <img src="./image copy.png" alt="img">
                 <h2>Ecommerce Website</h2>
@@ -292,7 +352,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('ecommerce')">View Description</button>
             </div>
-            <!-- Project 6 -->
+
             <div class="projectcard">
                 <img src="./image.png" alt="img">
                 <h2>Portfolio Website</h2>
@@ -305,7 +365,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('portfolio')">View Description</button>
             </div>
-            <!-- Project 7 -->
+   
             <div class="projectcard">
                 <img src="./image copy.png" alt="img">
                 <h2>Ecommerce Website</h2>
@@ -318,7 +378,7 @@
                 </div>
                 <button class="projectbtn" onclick="showPopup('ecommerce')">View Description</button>
             </div>
-            <!-- Project 8 -->
+
             <div class="projectcard">
                 <img src="./image.png" alt="img">
                 <h2>Portfolio Website</h2>
@@ -334,14 +394,13 @@
         </div>
     </section>
 
-    <!-- Popup Section -->
     <div id="popup" class="popup">
         <div class="popup-content"> 
-            <span class="close-btn" onclick="closePopup()">X</span>
+            <span class="close-btn" onclick="closePopup()">❌</span>
             <img id="popup-img" src="" alt="Project Image">
             <h2 id="popup-title"></h2>
             <p id="popup-description"></p>
-            <a href="https://divyanshi750.github.io/carPool/congo.html"class="projectbtn" target="_blank">View Project</a> 
+            <a href="https://divyanshi750.github.io/MyGame/"class="projectbtn" target="_blank">View Project</a> 
         </div>
         
     </div>
@@ -511,18 +570,19 @@ function closePopup() {
     popup.style.display = 'none';
 }
 
+    const chk = document.getElementById('chk');
 
-    var icon=document.getElementById("icon");
-    icon.onclick=function(){
-        document.body.classList.toggle("light-theme");
-        if (document.body.classList.contains("light-theme")) {
-            icon.src ="./moon.png"; 
-        }else{
-            icon.src="./sun.png";
-        }
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('light-theme');
+});
 
-    }
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
 
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
             </script>
 </body>
 </html>
