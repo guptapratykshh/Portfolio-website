@@ -12,7 +12,14 @@
     </head>
 <body aria-required="true">
     <header class="hero">
-        
+        <div id ="toggle">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
         
         <div id="hero-content"class="hero-content">
             <div class="hero-text">
@@ -28,7 +35,6 @@
                     <a href="https://github.com" target="_blank"><i class="fab fa-github" aria-label="opens gitub"></i></a>
                     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin" aria-label="opens linkedin"></i></a>
                     <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" aria-label=" opens youtube"></i></a>
-                    <img src="./sun.png" id="icon">
                   </div>
                 <div class="titles">
                     <h3>I am,</h3>
@@ -511,18 +517,19 @@ function closePopup() {
     popup.style.display = 'none';
 }
 
+    const chk = document.getElementById('chk');
 
-    var icon=document.getElementById("icon");
-    icon.onclick=function(){
-        document.body.classList.toggle("light-theme");
-        if (document.body.classList.contains("light-theme")) {
-            icon.src ="./moon.png"; 
-        }else{
-            icon.src="./sun.png";
-        }
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('light-theme');
+});
 
-    }
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
 
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
             </script>
 </body>
 </html>
