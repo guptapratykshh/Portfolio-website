@@ -14,12 +14,11 @@ body {
     box-sizing: border-box;
 }
 #icon{
-    height:25px;
-    float:right;
-    top:5px;
-    right:10px;
-    position:fixed; 
-    z-index: 1050;
+    height:27px;
+
+    font-size: 1.8rem;
+   cursor: pointer;
+
     }
     
 
