@@ -12,6 +12,15 @@
     </head>
 <body aria-required="true">
     <header class="hero">
+        <div id ="toggle">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        
         <div id="hero-content"class="hero-content">
             <div class="hero-text">
                 <div class="intro">
@@ -508,6 +517,19 @@ function closePopup() {
     popup.style.display = 'none';
 }
 
+    const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('light-theme');
+});
+
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
             </script>
 </body>
 </html>
